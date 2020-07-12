@@ -25,3 +25,4 @@ else
 fi
 
 source ~/dotfiles/zsh/zshrc.sh
+source ~/dotfiles/zsh/my_zshrc.sh
