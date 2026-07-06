@@ -2,9 +2,9 @@
 {
   programs.git = {
     enable = true;
-    userName = "parth";
-    userEmail = "parth@mehrotra.me";
-    extraConfig = {
+    settings = {
+      user.name = "parth";
+      user.email = "parth@mehrotra.me";
       push.default = "current";
       pull.default = "current";
       branch.autoSetupMerge = "true";
