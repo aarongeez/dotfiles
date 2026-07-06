@@ -117,6 +117,7 @@
                 "musescore"
                 "freecad"
                 "ableton-live-standard"
+                "claude"
               ];
             };
           }
