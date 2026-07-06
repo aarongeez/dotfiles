@@ -5,11 +5,11 @@
 
   networking.hostName = "parth-server-nix";
 
-  # Bootloader.
+  # Bootloader (legacy BIOS). Pinned to a stable by-id path because NVMe
+  # device numbers (nvmeXn1) re-enumerate across boots/hardware changes.
   boot.loader.grub = {
     enable = true;
-    device = "/dev/nvme1n1";
-    useOSProber = true;
+    device = "/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_2TB_S7KHNU0X804710H";
   };
 
   services.openssh = {

@@ -21,6 +21,7 @@
       lualine-nvim
 
       nvim-tree-lua
+      nvim-colorizer-lua
       nvim-lspconfig
       luasnip
       vim-sleuth
