@@ -114,22 +114,20 @@ require("nvim-tree").setup({
     }
 })
 
-local lspconfig = require("lspconfig")
-
-lspconfig.rust_analyzer.setup({
+vim.lsp.config('rust_analyzer', {
     settings = {
         ["rust-analyzer"] = {
             cargo = {
                 allFeatures = true,
             },
-            checkOnSave = {
+            check = {
                 command = "clippy",
             },
         },
     },
 })
 
-lspconfig.lua_ls.setup {
+vim.lsp.config('lua_ls', {
     settings = {
         Lua = {
             runtime = {
@@ -154,8 +152,8 @@ lspconfig.lua_ls.setup {
             },
         },
     },
-}
-lspconfig.nixd.setup {
+})
+vim.lsp.config('nixd', {
     settings = {
         nixd = {
             formatting = {
@@ -163,7 +161,8 @@ lspconfig.nixd.setup {
             }
         }
     }
-}
-lspconfig.nil_ls.setup {}
+})
+vim.lsp.enable({ 'rust_analyzer', 'lua_ls', 'nixd', 'nil_ls', 'zls' })
 
+vim.opt.termguicolors = true
 require('colorizer').setup()

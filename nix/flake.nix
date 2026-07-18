@@ -42,6 +42,8 @@
             nixd
             rust-analyzer
             rustup
+            zig
+            zls
             lockbook
             # listing clang here makes the macOS clang act strange
           ];

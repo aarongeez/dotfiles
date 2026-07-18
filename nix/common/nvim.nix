@@ -14,6 +14,7 @@
     withPython3 = false;
     plugins = with pkgs.vimPlugins; [
       nvim-web-devicons
+      plenary-nvim # telescope dependency, no longer pulled in transitively
       telescope-nvim
       nvim-cmp
       cmp-nvim-lsp
@@ -35,6 +36,7 @@
       lua-language-server
       nil
       nixd
+      zls
     ];
   };
 }
